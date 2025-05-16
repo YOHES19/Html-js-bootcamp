@@ -1,0 +1,94 @@
+/* Styling untuk judul */
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+/* Mengatur dasar layout dan background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #a265e3, #6695e5); /* Gradasi biru dan ungu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container utama yang memuat form dan logo */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse; /* Logo di kanan, form di kiri */
+    gap: 200px; /* Jarak antara logo dan form */
+}
+
+/* Container logo */
+.logo-container {
+    flex-shrink: 50; /* Jangan kecilkan logo */
+    text-align: center;
+}
+
+#logo {
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1); /* Efek zoom saat hover pada logo */
+}
+
+/* Container untuk memilih tanggal, bulan, tahun */
+.date-selector-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    transition: all 0.3s ease; /* Transisi smooth saat hover */
+}
+
+.date-selector-container:hover {
+    transform: translateY(-10px); /* Efek hover untuk memberi kesan mengambang */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar */
+}
+
+.date-selector label {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+select {
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+    outline: none;
+    border-color: #ff7e5f; /* Border warna saat fokus */
+    box-shadow: 0 0 5px rgba(255, 126, 95, 0.6); /* Efek glow saat fokus */
+}
